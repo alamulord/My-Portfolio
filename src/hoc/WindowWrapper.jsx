@@ -53,12 +53,22 @@ const WindowWrapper = (Component, windowKey) => {
 
       const [instance] = Draggable.create(el, {
         type: 'x,y',
-        trigger: '#window-header', // This ensures dragging only starts from the top bar
-        bounds: window, // Optional: keeps the window within the viewport
+        trigger: el.querySelector('#window-header'), // Scope this only to select the focus window controls for dagging
+        bounds: window, 
+        // Optional: keeps the window within the viewport
+
+        // const [instance] = Draggable.create(el, {
+        //   type: 'x,y',
+        //   trigger: '#window-header', // This ensures dragging only starts from the top bar
+        //   bounds: window, // Optional: keeps the window within the viewport
+        //   onPress: () => {
+        //     focusWindow(windowKey);
+        //   },
+        // });
+
+
+
         onPress: () => {
-          focusWindow(windowKey);
-        },
-        onDrag: () => {
           focusWindow(windowKey);
         },
       });
@@ -81,6 +91,7 @@ const WindowWrapper = (Component, windowKey) => {
         ref={refs}
         style={{ zIndex }}
         className='absolute'
+        onPointerDown={() => focusWindow(windowKey)}
       >
         <Component {...props} />
       </section>
