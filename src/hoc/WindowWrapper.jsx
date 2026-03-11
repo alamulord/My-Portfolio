@@ -90,10 +90,11 @@ const WindowWrapper = (Component, windowKey) => {
         id={windowKey}
         ref={refs}
         style={{ zIndex }}
-        className='absolute'
+        className={`absolute bg-white shadow-2xl drop-shadow-2xl rounded-xl border border-gray-200/50 ${!isMaximized ? 'resizable-window' : ''}`}
         onPointerDown={() => focusWindow(windowKey)}
       >
         <Component {...props} />
+        {!isMaximized && <div className="resize-handle" />}
       </section>
     );
   };

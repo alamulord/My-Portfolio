@@ -6,7 +6,6 @@ import {
   Safari,
   Terminal,
   Resume,
-  Trash,
   Gallery,
   Contact,
   Finder,
@@ -33,7 +32,6 @@ const App = () => {
       <Home/>
 
       <Gallery />
-      <Trash />
     </main>
   );
 };

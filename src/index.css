@@ -79,14 +79,14 @@ body {
   }
 
   #dock {
-    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-[9999] select-none max-sm:hidden;
 
     .dock-container {
       @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
     }
 
     .tooltip {
-      @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
+      @apply absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none;
     }
 
     .dock-icon {
@@ -96,6 +96,18 @@ body {
         @apply object-cover object-center;
       }
     }
+  }
+
+  .resizable-window {
+    @apply resize both overflow-hidden min-w-[300px] min-h-[200px];
+    &::-webkit-resizer {
+      background: transparent;
+    }
+  }
+
+  .resize-handle {
+    @apply absolute bottom-0 right-0 w-4 h-4 cursor-nwse-resize z-50;
+    background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1) 60%, transparent 60%, transparent 70%, rgba(0,0,0,0.1) 70%);
   }
 
   #window-controls {
@@ -250,8 +262,12 @@ body {
         li {
           @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors;
 
-          &:first-child {
+          &.active {
             @apply bg-blue-100 text-blue-700;
+          }
+
+          &.not-active {
+             @apply text-gray-700 hover:bg-gray-200;
           }
 
           img {
@@ -297,7 +313,7 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-[800px] h-[90vh] absolute top-10 left-1/2 -translate-x-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
     #window-header {
       h2 {
@@ -338,6 +354,26 @@ body {
 
       li {
         @apply absolute flex items-center flex-col gap-3;
+
+        img {
+          @apply object-contain object-center size-16 relative group-hover:scale-105;
+        }
+
+        p {
+          @apply text-sm text-center font-medium w-40;
+        }
+      }
+    }
+  }
+
+  #trash {
+    @apply absolute w-2xl left-60 top-32 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl h-96;
+
+    .content {
+      @apply flex-1 p-8 bg-white relative w-full h-full;
+
+      li {
+        @apply absolute flex items-center flex-col gap-3 cursor-pointer;
 
         img {
           @apply object-contain object-center size-16 relative group-hover:scale-105;

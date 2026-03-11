@@ -115,18 +115,33 @@
 
 // export default Dock
 import { useRef } from 'react';
-import { dockApps } from '#constants';
+import { dockApps, locations } from '#constants';
 import { Tooltip } from 'react-tooltip';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import useWindowStore from '#store/window';
+import useLocationStore from '#store/location';
 
 const Dock = () => {
   const { openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
 
+  const { setActiveLocation } = useLocationStore();
+
   const handleClick = (app) => {
     if (!app.canOpen) return;
+
+    if (app.id === 'trash') {
+      const window = windows['finder'];
+      setActiveLocation(locations.trash);
+      
+      if (window?.isOpen) {
+        openWindow('finder'); 
+      } else {
+        openWindow('finder');
+      }
+      return;
+    }
 
     const window = windows[app.id];
 
