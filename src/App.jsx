@@ -1,7 +1,13 @@
 import gsap from 'gsap';
 import { Draggable } from 'gsap/all';
 
-import { Navbar, Welcome, Dock, Home } from '#components';
+import {
+  Navbar,
+  Welcome,
+  Dock,
+  Home,
+  Background,
+} from '#components';
 import {
   Safari,
   Terminal,
@@ -18,6 +24,7 @@ gsap.registerPlugin(Draggable);
 const App = () => {
   return (
     <main>
+      <Background />
       <Navbar />
       <Welcome />
       <Dock />

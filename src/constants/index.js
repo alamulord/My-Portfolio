@@ -114,7 +114,7 @@ const techStack = [
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'NestJS', 'Hono'],
+    items: ['Node.js', 'Express', 'NestJS', 'Hono', 'Python'],
   },
   {
     category: 'Database',
@@ -132,7 +132,7 @@ const socials = [
     text: 'Github',
     icon: '/icons/github.svg',
     bg: '#f4656b',
-    link: 'https://github.com/JavaScript-Mastery-Pro',
+    link: 'https://github.com/alamulord',
   },
   {
     id: 2,
@@ -146,14 +146,14 @@ const socials = [
     text: 'Twitter/X',
     icon: '/icons/twitter.svg',
     bg: '#ff866b',
-    link: 'https://x.com/jsmasterypro',
+    link: 'https://x.com/',
   },
   {
     id: 4,
     text: 'LinkedIn',
     icon: '/icons/linkedin.svg',
     bg: '#05b6f6',
-    link: 'https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all',
+    link: 'https://www.linkedin.com/in/aliyu-a-ayomide/',
   },
 ];
 
@@ -202,6 +202,18 @@ const gallery = [
     id: 4,
     img: '/images/gal4.png',
   },
+  {
+    id: 5,
+    img: '/images/gal5.png',
+  },
+  {
+    id: 6,
+    img: '/images/gal6.png',
+  },
+  {
+    id: 7,
+    img: '/images/gal7.png',
+  },
 ];
 
 export {
@@ -225,7 +237,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: 'Nike Ecommerce Website Application',
+      name: 'Study Space Finder',
       icon: '/images/folder.png',
       kind: 'folder',
       position: 'top-10 left-5', // icon position inside Finder
@@ -247,11 +259,11 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: 'nike.com',
+          name: 'study-space-finder.vercel.app',
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU',
+          href: 'https://study-space-finder.vercel.app/',
           position: 'top-10 right-20',
         },
         {
@@ -263,15 +275,15 @@ const WORK_LOCATION = {
           position: 'top-52 right-80',
           imageUrl: '/images/project-1.png',
         },
-        {
-          id: 5,
-          name: 'Design.fig',
-          icon: '/images/plain.png',
-          kind: 'file',
-          fileType: 'fig',
-          href: 'https://google.com',
-          position: 'top-60 right-20',
-        },
+        // {
+        //   id: 5,
+        //   name: 'Design.fig',
+        //   icon: '/images/plain.png',
+        //   kind: 'file',
+        //   fileType: 'fig',
+        //   href: 'https://google.com',
+        //   position: 'top-60 right-20',
+        // },
       ],
     },
 
@@ -300,11 +312,11 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: 'ai-resume-analyzer.com',
+          name: 'paysheild-ai-fraud-detection-system.vercel.app',
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl',
+          href: 'https://paysheild-ai-fraud-detection-system.vercel.app/',
           position: 'top-20 left-20',
         },
         {
@@ -353,11 +365,62 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: 'food-delivery-app.com',
+          name: 'friendly-dev-frontend-flame.vercel.app',
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-',
+          href: 'https://friendly-dev-frontend-flame.vercel.app/',
+          position: 'top-10 right-20',
+        },
+        {
+          id: 4,
+          name: 'food-delivery-app.png',
+          icon: '/images/image.png',
+          kind: 'file',
+          fileType: 'img',
+          position: 'top-52 right-80',
+          imageUrl: '/images/project-3.png',
+        },
+        {
+          id: 5,
+          name: 'Design.fig',
+          icon: '/images/plain.png',
+          kind: 'file',
+          fileType: 'fig',
+          href: 'https://google.com',
+          position: 'top-60 right-20',
+        },
+      ],
+    },
+    {
+      id: 7,
+      name: 'Food Delivery App',
+      icon: '/images/folder.png',
+      kind: 'folder',
+      position: 'top-10 left-80',
+      windowPosition: 'top-[33vh] left-7',
+      children: [
+        {
+          id: 1,
+          name: 'Food Delivery App Project.txt',
+          icon: '/images/txt.png',
+          kind: 'file',
+          fileType: 'txt',
+          position: 'top-5 left-10',
+          description: [
+            'Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.',
+            'Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.',
+            'Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.',
+            'It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.',
+          ],
+        },
+        {
+          id: 2,
+          name: 'my-crypto-dash.vercel.app',
+          icon: '/images/safari.png',
+          kind: 'file',
+          fileType: 'url',
+          href: 'https://my-crypto-dash.vercel.app/',
           position: 'top-10 right-20',
         },
         {
