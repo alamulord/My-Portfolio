@@ -139,14 +139,14 @@ const socials = [
     text: 'Platform',
     icon: '/icons/atom.svg',
     bg: '#4bcb63',
-    link: 'https://jsmastery.com/',
+    link: 'https://discord.com/channels/@alamulord',
   },
   {
     id: 3,
     text: 'Twitter/X',
     icon: '/icons/twitter.svg',
     bg: '#ff866b',
-    link: 'https://x.com/',
+    link: 'https://x.com/alamulord',
   },
   {
     id: 4,
