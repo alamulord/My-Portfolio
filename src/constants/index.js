@@ -70,7 +70,7 @@ const dockApps = [
     id: 'trash',
     name: 'Archive', // was "Trash"
     icon: 'trash.png',
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
@@ -114,7 +114,7 @@ const techStack = [
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'NestJS', 'Hono'],
+    items: ['Node.js', 'Express', 'NestJS', 'Hono', 'Python'],
   },
   {
     category: 'Database',
@@ -132,7 +132,7 @@ const socials = [
     text: 'Github',
     icon: '/icons/github.svg',
     bg: '#f4656b',
-    link: 'https://github.com/JavaScript-Mastery-Pro',
+    link: 'https://github.com/alamulord',
   },
   {
     id: 2,
@@ -146,14 +146,14 @@ const socials = [
     text: 'Twitter/X',
     icon: '/icons/twitter.svg',
     bg: '#ff866b',
-    link: 'https://x.com/jsmasterypro',
+    link: 'https://x.com/',
   },
   {
     id: 4,
     text: 'LinkedIn',
     icon: '/icons/linkedin.svg',
     bg: '#05b6f6',
-    link: 'https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all',
+    link: 'https://www.linkedin.com/in/aliyu-a-ayomide/',
   },
 ];
 
@@ -188,19 +188,31 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: '/images/gal1.png',
+    img: '/images/gal8.jpeg',
   },
   {
     id: 2,
-    img: '/images/gal2.png',
+    img: '/images/gal2.jpg',
   },
   {
     id: 3,
-    img: '/images/gal3.png',
+    img: '/images/gal5.jpg',
   },
   {
     id: 4,
-    img: '/images/gal4.png',
+    img: '/images/gal6.png',
+  },
+  {
+    id: 5,
+    img: '/images/gal4.jpg',
+  },
+  {
+    id: 7,
+    img: '/images/gal3.jpg',
+  },
+  {
+    id: 8,
+    img: '/images/gal7.jpg',
   },
 ];
 
@@ -225,159 +237,208 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: 'Nike Ecommerce Website Application',
+      name: 'Study Space Finder',
       icon: '/images/folder.png',
       kind: 'folder',
-      position: 'top-10 left-5', // icon position inside Finder
-      windowPosition: 'top-[5vh] left-5', // optional: Finder window position
+      position: 'top-[40px] left-[40px]', // icon position inside Finder
+      windowPosition: 'top-[5vh] right-5', // optional: Finder window position
       children: [
         {
           id: 1,
-          name: 'Nike Project.txt',
+          name: 'Study Space Finder Project.txt',
           icon: '/images/txt.png',
           kind: 'file',
           fileType: 'txt',
           position: 'top-5 left-10',
           description: [
-            'The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.',
-            'Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.',
-            'Think of it like walking into a flagship Nike store—but right from your phone or laptop.',
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            'study space finder is a platform that helps students find study spaces.',
+            'instead of going to the library to find a study space, you can find a study space using this system.',
+            'think of it like a virtual library that helps you find a study space.',
+            "It's built with reactjs and tailwindcss, ensuring fast performance, responsive design, and a clean, premium look.",
           ],
         },
         {
           id: 2,
-          name: 'nike.com',
+          name: 'study-space-finder.vercel.app',
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU',
+          href: 'https://study-space-finder.vercel.app/',
           position: 'top-10 right-20',
         },
         {
           id: 4,
-          name: 'nike.png',
+          name: 'study-space-finder.png',
           icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-52 right-80',
-          imageUrl: '/images/project-1.png',
+          imageUrl: '/images/study-space-finder.png',
         },
-        {
-          id: 5,
-          name: 'Design.fig',
-          icon: '/images/plain.png',
-          kind: 'file',
-          fileType: 'fig',
-          href: 'https://google.com',
-          position: 'top-60 right-20',
-        },
+        // {
+        //   id: 5,
+        //   name: 'Design.fig',
+        //   icon: '/images/plain.png',
+        //   kind: 'file',
+        //   fileType: 'fig',
+        //   href: 'https://google.com',
+        //   position: 'top-60 right-20',
+        // },
       ],
     },
 
     // ▶ Project 2
     {
       id: 6,
-      name: 'AI Resume Analyzer',
+      name: 'paysheild ai fraud detection system',
       icon: '/images/folder.png',
       kind: 'folder',
-      position: 'top-52 right-80',
-      windowPosition: 'top-[20vh] left-7',
+      position: 'top-[40px] left-[200px]',
+      windowPosition: 'top-[5vh] left-5',
       children: [
         {
           id: 1,
-          name: 'AI Resume Analyzer Project.txt',
+          name: 'paysheild ai fraud detection system Project.txt',
           icon: '/images/txt.png',
           kind: 'file',
           fileType: 'txt',
           position: 'top-5 right-10',
           description: [
-            'AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.',
-            'Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.',
-            'Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.',
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            'paysheild ai fraud detection system helps detect fraud in transactions.',
+            'Instead of going to the bank to report fraud, you can report fraud using this system or detect fraud using this system.',
+            'think of it as a virtual bank that helps detect anonymous transactions and prevent fraud.',
+            "It's built with, Nextjs, Python and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
           ],
         },
         {
           id: 2,
-          name: 'ai-resume-analyzer.com',
+          name: 'paysheild-ai-fraud-detection-system.vercel.app',
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl',
+          href: 'https://paysheild-ai-fraud-detection-system.vercel.app/',
           position: 'top-20 left-20',
         },
         {
           id: 4,
-          name: 'ai-resume-analyzer.png',
+          name: 'paysheild.jpeg',
           icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-52 left-80',
-          imageUrl: '/images/project-2.png',
+          imageUrl: '/images/paysheild.jpeg',
         },
-        {
-          id: 5,
-          name: 'Design.fig',
-          icon: '/images/plain.png',
-          kind: 'file',
-          fileType: 'fig',
-          href: 'https://google.com',
-          position: 'top-60 left-5',
-        },
+        // {
+        //   id: 5,
+        //   name: 'Design.fig',
+        //   icon: '/images/plain.png',
+        //   kind: 'file',
+        //   fileType: 'fig',
+        //   href: 'https://google.com',
+        //   position: 'top-60 left-5',
+        // },
       ],
     },
 
     // ▶ Project 3
     {
       id: 7,
-      name: 'Food Delivery App',
+      name: 'friendly dev frontend flame',
       icon: '/images/folder.png',
       kind: 'folder',
-      position: 'top-10 left-80',
-      windowPosition: 'top-[33vh] left-7',
+      position: 'top-[40px] left-[360px]',
+      windowPosition: 'top-[18vh] left-5',
       children: [
         {
           id: 1,
-          name: 'Food Delivery App Project.txt',
+          name: 'friendly dev frontend flame Project.txt',
           icon: '/images/txt.png',
           kind: 'file',
           fileType: 'txt',
           position: 'top-5 left-10',
           description: [
-            'Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.',
-            'Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.',
-            'Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.',
-            'It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.',
+            'Friendly dev frontend flame is a small design of a frontend developer portfolio.',
+            'It’s built with React and Tailwind, so it works smoothly on both iOS and Android with a clean, modern design.',
           ],
         },
         {
           id: 2,
-          name: 'food-delivery-app.com',
+          name: 'friendly-dev-frontend-flame.vercel.app',
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-',
+          href: 'https://friendly-dev-frontend-flame.vercel.app/',
           position: 'top-10 right-20',
         },
         {
           id: 4,
-          name: 'food-delivery-app.png',
+          name: 'friendly-dev.jpeg',
           icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-52 right-80',
-          imageUrl: '/images/project-3.png',
+          imageUrl: '/images/friendly-dev.jpeg',
+        },
+        // {
+        //   id: 5,
+        //   name: 'Design.fig',
+        //   icon: '/images/plain.png',
+        //   kind: 'file',
+        //   fileType: 'fig',
+        //   href: 'https://google.com',
+        //   position: 'top-60 right-20',
+        // },
+      ],
+    },
+    {
+      id: 8,
+      name: 'my crypto dash',
+      icon: '/images/folder.png',
+      kind: 'folder',
+      position: 'top-[200px] left-[40px]',
+      windowPosition: 'top-[15vh] right-5',
+      children: [
+        {
+          id: 1,
+          name: 'my-crypto-dash Project.txt',
+          icon: '/images/txt.png',
+          kind: 'file',
+          fileType: 'txt',
+          position: 'top-5 left-10',
+          description: [
+            'Our my-crypto-dash is a fast and convenient way to track your crypto.',
+            'Instead of going to other crypto websites to check your crypto, you can check it all in one place.',
+            'Think of it like having your favorite crypto websites in your pocket—ready to deliver anytime, anywhere.',
+            'It’s built with React, so it works smoothly on both ios/android devices and on the web with a clean, modern design.',
+          ],
         },
         {
-          id: 5,
-          name: 'Design.fig',
-          icon: '/images/plain.png',
+          id: 2,
+          name: 'my-crypto-dash.vercel.app',
+          icon: '/images/safari.png',
           kind: 'file',
-          fileType: 'fig',
-          href: 'https://google.com',
-          position: 'top-60 right-20',
+          fileType: 'url',
+          href: 'https://my-crypto-dash.vercel.app/',
+          position: 'top-10 right-20',
         },
+        {
+          id: 4,
+          name: 'crypto-dash.png',
+          icon: '/images/image.png',
+          kind: 'file',
+          fileType: 'img',
+          position: 'top-52 right-80',
+          imageUrl: '/images/crypto-dash.jpeg',
+        },
+        // {
+        //   id: 5,
+        //   name: 'Design.fig',
+        //   icon: '/images/plain.png',
+        //   kind: 'file',
+        //   fileType: 'fig',
+        //   href: 'https://google.com',
+        //   position: 'top-60 right-20',
+        // },
       ],
     },
   ],
@@ -406,7 +467,7 @@ const ABOUT_LOCATION = {
       kind: 'file',
       fileType: 'img',
       position: 'top-28 right-72',
-      imageUrl: '/images/abdulsamad.png',
+      imageUrl: '/images/gal2.jpg',
     },
     {
       id: 3,
@@ -415,7 +476,7 @@ const ABOUT_LOCATION = {
       kind: 'file',
       fileType: 'img',
       position: 'top-52 left-80',
-      imageUrl: '/images/abdulsamad.png',
+      imageUrl: '/images/gal1.jpg',
     },
     {
       id: 4,
@@ -445,12 +506,11 @@ const RESUME_LOCATION = {
   children: [
     {
       id: 1,
-      name: 'Resume.pdf',
+      name: 'Myresume.pdf',
       icon: '/images/pdf.png',
       kind: 'file',
       fileType: 'pdf',
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
+      pdfSrc: 'local', // signals Resume.jsx to use the local import
     },
   ],
 };
@@ -501,6 +561,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
