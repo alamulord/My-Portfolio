@@ -19,12 +19,12 @@ const Trash = () => {
         <WindowControls target='trash' />
         <Trash2 className='icon' />
       </div>
-      <div className='flex h-full bg-white w-full'>
+      <div className='flex bg-white w-full window-content'>
         <ul className='content w-full'>
           {trashItems.map((item) => (
             <li
               key={item.id}
-              className={item.position}
+              className="group cursor-pointer"
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />

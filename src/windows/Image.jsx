@@ -18,7 +18,7 @@ const Image = () => {
         <p>{name}</p>
       </div>
 
-      <div className='preview'>
+      <div className='preview window-content'>
         {imageUrl && <img src={imageUrl} alt={name || 'Image'} />}
       </div>
     </>

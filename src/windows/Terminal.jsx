@@ -10,7 +10,7 @@ const Terminal = () => {
         <WindowControls target='terminal' />
         <h2>tech stack</h2>
       </div>
-      <div className='techstack'>
+      <div className='techstack window-content'>
         <p>
           <span className='font-bold'>@Abdulsamad Ayomide Aliyu  % </span>
           show tech stack

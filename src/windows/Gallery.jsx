@@ -49,8 +49,8 @@ const Gallery = () => {
         </div>
       </div>
       
-      <div className='flex bg-white w-full' style={{ height: 'calc(100% - 46px)' }}>
-        <div className='sidebar'>
+      <div className='flex bg-white w-full' style={{ height: 'calc(100% - 44px)' }}>
+        <div className='sidebar h-full'>
           <h2>Photos</h2>
           <ul>
             {photosLinks.map((link) => (
@@ -65,7 +65,7 @@ const Gallery = () => {
             ))}
           </ul>
         </div>
-        <div className='gallery flex-1 overflow-y-auto'>
+        <div className='flex-1 h-full overflow-y-auto p-3 bg-white scrollbar-ghost'>
           {displayedGallery.length === 0 ? (
             <div className="flex flex-col w-full h-full items-center justify-center text-gray-400 gap-3">
               <ImageOff className="w-12 h-12 text-gray-300" />
@@ -73,17 +73,21 @@ const Gallery = () => {
               <p className="text-sm">Hover over an image and click the heart to add it.</p>
             </div>
           ) : (
-            <ul className="h-fit w-full">
+            <div className="columns-2 gap-2">
               {displayedGallery.map((item) => {
                 const isFav = isFavorite(item.id);
                 return (
-                  <li 
-                    key={item.id} 
-                    onClick={() => openImage(item)} 
-                    className="relative cursor-pointer group"
+                  <div
+                    key={item.id}
+                    onClick={() => openImage(item)}
+                    className="relative cursor-pointer group break-inside-avoid mb-2"
                   >
-                    <img src={item.img} alt={`Gallery ${item.id}`} />
-                    <button 
+                    <img
+                      src={item.img}
+                      alt={`Gallery ${item.id}`}
+                      className="w-full h-auto rounded-lg object-cover"
+                    />
+                    <button
                       className={clsx(
                         "absolute bottom-2 right-2 p-1.5 rounded-full transition-all duration-200 z-10",
                         isFav ? "opacity-100 bg-black/60" : "opacity-0 group-hover:opacity-100 bg-black/40 hover:bg-black/60"
@@ -92,10 +96,10 @@ const Gallery = () => {
                     >
                       <Heart className={clsx("w-4 h-4", isFav ? "fill-red-500 text-red-500" : "text-white")} />
                     </button>
-                  </li>
+                  </div>
                 );
               })}
-            </ul>
+            </div>
           )}
         </div>
       </div>

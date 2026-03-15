@@ -95,9 +95,55 @@ body {
   }
 
   .resizable-window {
-    @apply resize both overflow-hidden min-w-[300px] min-h-[200px];
+    @apply flex flex-col resize overflow-hidden min-w-[300px] min-h-[200px];
+
     &::-webkit-resizer {
       background: transparent;
+    }
+
+    .window-content {
+      @apply flex-1 min-h-0 overflow-auto;
+      
+      /* Subtle macOS-like scrollbar */
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        @apply bg-gray-300/50 rounded-full hover:bg-gray-400/50;
+      }
+    }
+  }
+
+  /* Scrollbar hidden but functional — scroll works, bar is invisible */
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome/Safari/Opera */
+    }
+  }
+
+  /* Subtle ghost scrollbar that only appears on hover */
+  .scrollbar-ghost {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 9999px;
+      transition: background 0.2s;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.12);
     }
   }
 
@@ -245,7 +291,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-3xl h-[500px] absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -272,36 +318,6 @@ body {
 
           p {
             @apply text-sm font-medium;
-          }
-        }
-      }
-    }
-
-    .gallery {
-      @apply p-5;
-
-      ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
-
-        li {
-          img {
-            @apply size-full object-cover rounded-lg;
-          }
-
-          &:first-child {
-            @apply row-start-1 row-span-3 col-start-1 col-span-3;
-          }
-
-          &:nth-child(2) {
-            @apply row-start-1 row-span-3 col-start-4 col-span-2;
-          }
-
-          &:nth-child(3) {
-            @apply row-start-4 row-span-2 col-start-3 col-span-3;
-          }
-
-          &:last-child {
-            @apply row-start-4 row-span-2 col-start-1 col-span-2;
           }
         }
       }
@@ -346,17 +362,17 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-white max-w-2xl relative grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-y-8 items-start content-start;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
+        @apply flex items-center flex-col gap-2 cursor-pointer;
 
         img {
-          @apply object-contain object-center size-16 relative group-hover:scale-105;
+          @apply object-contain object-center size-14 relative group-hover:scale-105 transition-transform;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply text-[11px] text-center font-medium w-full break-words px-1 leading-tight;
         }
       }
     }
@@ -366,17 +382,17 @@ body {
     @apply absolute w-2xl left-60 top-32 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl h-96;
 
     .content {
-      @apply flex-1 p-8 bg-white relative w-full h-full;
+      @apply flex-1 p-8 bg-white relative w-full h-full grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-y-8 items-start content-start;
 
       li {
-        @apply absolute flex items-center flex-col gap-3 cursor-pointer;
+        @apply flex items-center flex-col gap-2 cursor-pointer;
 
         img {
-          @apply object-contain object-center size-16 relative group-hover:scale-105;
+          @apply object-contain object-center size-14 relative group-hover:scale-105 transition-transform;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply text-[11px] text-center font-medium w-full break-words px-1 leading-tight;
         }
       }
     }

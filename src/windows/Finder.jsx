@@ -31,7 +31,7 @@ const Finder = () => {
   );
 
   const openItem = (item) => {
-    if (item.fileType === 'pdf') return openWindow('resume');
+    if (item.fileType === 'pdf') return openWindow('resume', item);
     if (item.kind === 'folder') return setActiveLocation(item);
     if (['fig', 'url'].includes(item.fileType) && item.href)
       return window.open(item.href, '_blank');
@@ -44,7 +44,7 @@ const Finder = () => {
         <WindowControls target='finder' />
         <Search className='icon' />
       </div>
-      <div className='flex h-full bg-white'>
+      <div className='flex window-content bg-white overflow-hidden!'>
         <div className='sidebar'>
           {finderList('Favorites', Object.values(locations))}
           {finderList('Work', locations.work.children)}
@@ -54,7 +54,7 @@ const Finder = () => {
           {activeLocation?.children?.map((item) => (
             <li
               key={item.id}
-              className={item.position}
+              className='group cursor-pointer'
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />

@@ -18,7 +18,7 @@ const Text = () => {
         <h2>{name}</h2>
       </div>
 
-      <div className='p-6 bg-white overflow-y-auto max-h-[70vh]'>
+      <div className='p-6 bg-white window-content'>
         {image && (
           <img
             src={image}
