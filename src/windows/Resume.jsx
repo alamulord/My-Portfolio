@@ -89,7 +89,7 @@ const Resume = () => {
       </div>
 
       {/* PDF Viewer */}
-      <div className='flex justify-center window-content bg-gray-100 p-4'>
+      <div className='flex justify-center window-content bg-gray-100 p-2'>
         <Document
           file={pdfFile}
           onLoadSuccess={onLoadSuccess}
