@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- BANNER IMAGE — replace with your own screenshot -->
-![macOS Portfolio Banner](https://placehold.co/1200x500/1a1a2e/ffffff?text=macOS+Portfolio+–+Abdulsamad+Aliyu)
+![macOS Portfolio Banner](./public/images/readme/homepage.png)
 
 <h1>🍎 macOS Portfolio</h1>
 
@@ -26,17 +26,17 @@
 
 | Desktop | Finder / Projects |
 |:---:|:---:|
-| ![Desktop view](https://placehold.co/600x380/0f172a/94a3b8?text=Desktop+View) | ![Finder window](https://placehold.co/600x380/0f172a/94a3b8?text=Finder+%2F+Projects) |
+| ![Desktop view](./public/images/readme/homepage.png) | ![Finder window](./public/images/readme/finder.png) |
 
-| Terminal / Skills | Resume PDF Viewer |
+| Terminal / Skills | Contact |
 |:---:|:---:|
-| ![Terminal Skills](https://placehold.co/600x380/0f172a/94a3b8?text=Terminal+%2F+Skills) | ![Resume Viewer](https://placehold.co/600x380/0f172a/94a3b8?text=Resume+PDF+Viewer) |
+| ![Terminal Skills](./public/images/readme/terminal.png) | ![Contact](./public/images/readme/contact.png) |
 
 | Gallery / Photos | Articles / Safari |
 |:---:|:---:|
-| ![Gallery](https://placehold.co/600x380/0f172a/94a3b8?text=Gallery+%2F+Photos) | ![Articles](https://placehold.co/600x380/0f172a/94a3b8?text=Articles+%2F+Safari) |
+| ![Gallery](./public/images/readme/galary.png) | ![Articles](./public/images/readme/safari.png) |
 
-> 💡 **Tip:** To add real screenshots, take a snip of each window, commit the images to `/public/images/readme/`, and update the `src` paths above.
+> All screenshots are served from `public/images/readme/` and render correctly on GitHub.
 
 ---
 
