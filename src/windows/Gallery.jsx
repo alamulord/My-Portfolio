@@ -85,6 +85,8 @@ const Gallery = () => {
                     <img
                       src={item.img}
                       alt={`Gallery ${item.id}`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-auto rounded-lg object-cover"
                     />
                     <button

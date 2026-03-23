@@ -47,7 +47,7 @@ const Safari = () => {
         {blogPosts.map(({ id, title, date, link, image }) => (
           <div key={id} className='blog-post'>
             <div className='col-span-2'>
-              <img src={image} alt={title} />
+              <img src={image} alt={title} loading="lazy" decoding="async" />
             </div>
 
             <div className="content">
