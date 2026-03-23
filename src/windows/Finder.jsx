@@ -17,7 +17,7 @@ const Finder = () => {
   const workNeedsScroll = workItems.length > MAX_VISIBLE_WORK_ITEMS;
 
   const finderList = (name, items, needsScroll = false) => (
-    <div className={clsx('flex flex-col', needsScroll && 'min-h-0 shrink')}>
+    <div className={clsx('flex flex-col', needsScroll && 'min-h-0 shink')}>
       <h3>{name}</h3>
       <ul
         className={clsx(
