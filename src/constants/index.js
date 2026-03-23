@@ -468,11 +468,11 @@ const ABOUT_LOCATION = {
       kind: 'file',
       fileType: 'img',
       position: 'top-28 right-72',
-      imageUrl: '/images/gal2.jpg',
+      imageUrl: '/images/gal1.jpg',
     },
     {
       id: 3,
-      name: 'conference-me.png',
+      name: 'Colleagues-me.png',
       icon: '/images/image.png',
       kind: 'file',
       fileType: 'img',
