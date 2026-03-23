@@ -79,7 +79,7 @@ const Welcome = () => {
       <p ref={subtitleRef} className='title'>
         {AnimatedText(
           "Hey, I'm Abdulsamad Aliyu Ayomide, Welcome to my",
-          'text-3xl font-georama',
+          'text-3xl font-georama text-center',
           100,
         )}
       </p>

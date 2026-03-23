@@ -6,15 +6,31 @@ import { Search } from 'lucide-react';
 import clsx from 'clsx';
 import useWindowStore from '#store/window';
 
+const MAX_VISIBLE_WORK_ITEMS = 4;
+
 const Finder = () => {
   const { activeLocation, setActiveLocation } = useLocationStore();
   const { openWindow } = useWindowStore();
 
-  const finderList = (name, item) => (
-    <div>
+  const workItems = locations.work.children;
+  const favItems = Object.values(locations);
+  const workNeedsScroll = workItems.length > MAX_VISIBLE_WORK_ITEMS;
+
+  const finderList = (name, items, needsScroll = false) => (
+    <div className={clsx('flex flex-col', needsScroll && 'min-h-0 shrink')}>
       <h3>{name}</h3>
-      <ul>
-        {item.map((item) => (
+      <ul
+        className={clsx(
+          'space-y-1',
+          needsScroll && [
+            'overflow-y-auto',
+            'scrollbar-ghost',
+            'pr-1',
+          ],
+        )}
+        style={needsScroll ? { maxHeight: `${MAX_VISIBLE_WORK_ITEMS * 40}px` } : undefined}
+      >
+        {items.map((item) => (
           <li
             key={item.id}
             onClick={() => setActiveLocation(item)}
@@ -22,7 +38,7 @@ const Finder = () => {
               item.id === activeLocation.id ? 'active' : 'not-active',
             )}
           >
-            <img src={item.icon} alt={item.name} className='w-4' />
+            <img src={item.icon} alt={item.name} className='w-4 shrink-0' />
             <p className='font-bold truncate text-sm'>{item.name}</p>
           </li>
         ))}
@@ -45,9 +61,9 @@ const Finder = () => {
         <Search className='icon' />
       </div>
       <div className='flex window-content bg-white overflow-hidden!'>
-        <div className='sidebar'>
-          {finderList('Favorites', Object.values(locations))}
-          {finderList('Work', locations.work.children)}
+        <div className='sidebar flex flex-col overflow-hidden'>
+          {finderList('Favorites', favItems)}
+          {finderList('Work', workItems, workNeedsScroll)}
         </div>
         {/* content inside the tabs */}
         <ul className='content'>

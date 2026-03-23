@@ -79,4 +79,31 @@ export default defineConfig({
       strict: false,
     },
   },
+  build: {
+    // Keep images as separate cacheable HTTP resources – never inline as base64
+    assetsInlineLimit: 0,
+    // Target modern browsers for smaller output (no legacy polyfills)
+    target: 'esnext',
+    rollupOptions: {
+      output: {
+        // Split heavy vendor libraries into separate cacheable chunks.
+        // Users only re-download a chunk when that specific library changes,
+        // not the entire bundle.
+        manualChunks: (id) => {
+          if (id.includes('node_modules/gsap')) return 'vendor-gsap';
+          if (id.includes('node_modules/framer-motion')) return 'vendor-framer';
+          if (
+            id.includes('node_modules/@react-pdf-viewer') ||
+            id.includes('node_modules/pdfjs-dist') ||
+            id.includes('node_modules/react-pdf')
+          ) return 'vendor-pdf';
+          if (id.includes('node_modules/react-tooltip')) return 'vendor-tooltip';
+          if (
+            id.includes('node_modules/react/') ||
+            id.includes('node_modules/react-dom/')
+          ) return 'vendor-react';
+        },
+      },
+    },
+  },
 });
