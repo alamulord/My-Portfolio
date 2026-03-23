@@ -22,8 +22,6 @@
 
 ## 📸 Screenshots
 
-> **Replace the placeholder `id` attributes below with the actual image URLs once you add them.**
-
 | Desktop | Finder / Projects |
 |:---:|:---:|
 | ![Desktop view](./public/images/readme/homepage.png) | ![Finder window](./public/images/readme/finder.png) |
@@ -35,10 +33,6 @@
 | Gallery / Photos | Articles / Safari |
 |:---:|:---:|
 | ![Gallery](./public/images/readme/galary.png) | ![Articles](./public/images/readme/safari.png) |
-
-> All screenshots are served from `public/images/readme/` and render correctly on GitHub.
-
----
 
 ## ✨ Features
 
