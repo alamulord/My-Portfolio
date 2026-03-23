@@ -34,8 +34,6 @@
 |:---:|:---:|
 | ![Gallery](./public/images/readme/galary.png) | ![Articles](./public/images/readme/safari.png) |
 
----
-
 ## ✨ Features
 
 | Feature | Description |
