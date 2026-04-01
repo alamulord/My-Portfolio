@@ -79,7 +79,7 @@ const Welcome = () => {
       <p ref={subtitleRef} className='title'>
         {AnimatedText(
           "Hey, I'm Abdulsamad Aliyu Ayomide, Welcome to my",
-          'text-3xl font-georama text-center',
+          'text-3xl font-georama',
           100,
         )}
       </p>
@@ -87,10 +87,7 @@ const Welcome = () => {
         {AnimatedText('portfolio', 'text-9xl font-bold font-georama')}
       </h1>
 
-      {/* not mobile responsive */}
-      <div className='small-screen'>
-        <p>Sorry, this portfolio is designed for laptops/tablets only </p>
-      </div>
+
     </section>
   );
 };

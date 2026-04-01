@@ -1,8 +1,10 @@
-import Navbar from "./Navbar";
-import Welcome from "./Welcome";
-import Dock from "./Dock";
-import WindowControls from "./WindowControls";
-import Home from "./Home";
-import Background from "./Background";
-
-export {Navbar, Welcome, Dock, WindowControls, Home, Background};
+export { default as Navbar } from './Navbar';
+export { default as Welcome } from './Welcome';
+export { default as Dock } from './Dock';
+export { default as Home } from './Home';
+export { default as Background } from './Background';
+export { default as WindowControls } from './WindowControls';
+export { default as MobileShell } from './MobileShell';
+export { default as MobilePageHeader } from './MobilePageHeader';
+export { default as MobileBottomBar } from './MobileBottomBar';
+export { default as MobileHomeScreen } from './MobileHomeScreen';

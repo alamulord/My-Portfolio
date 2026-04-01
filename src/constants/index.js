@@ -241,7 +241,7 @@ const WORK_LOCATION = {
       icon: '/images/folder.png',
       kind: 'folder',
       position: 'top-[40px] left-[40px]', // icon position inside Finder
-      windowPosition: 'top-[5vh] right-5', // optional: Finder window position
+      windowPosition: 'top-[5vh] left-5', // stacked left
       children: [
         {
           id: 1,
@@ -294,7 +294,7 @@ const WORK_LOCATION = {
       icon: '/images/folder.png',
       kind: 'folder',
       position: 'top-[40px] left-[200px]',
-      windowPosition: 'top-[5vh] left-5',
+      windowPosition: 'top-[16vh] left-5',
       children: [
         {
           id: 1,
@@ -347,7 +347,7 @@ const WORK_LOCATION = {
       icon: '/images/folder.png',
       kind: 'folder',
       position: 'top-[40px] left-[360px]',
-      windowPosition: 'top-[18vh] left-5',
+      windowPosition: 'top-[27vh] left-5',
       children: [
         {
           id: 1,
@@ -396,7 +396,7 @@ const WORK_LOCATION = {
       icon: '/images/folder.png',
       kind: 'folder',
       position: 'top-[200px] left-[40px]',
-      windowPosition: 'top-[15vh] right-5',
+      windowPosition: 'top-[38vh] left-5',
       children: [
         {
           id: 1,
