@@ -72,6 +72,11 @@ export default defineConfig({
         dirname(fileURLToPath(import.meta.url)),
         'src/constants',
       ),
+      '#mobile': resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        'src/mobile',
+      ),
+      '#hooks': resolve(dirname(fileURLToPath(import.meta.url)), 'src/hooks'),
     },
   },
   server: {
