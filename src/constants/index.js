@@ -316,7 +316,7 @@ const WORK_LOCATION = {
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://payshield-q04xms5s3-aliyu-abdulsamad-ayomides-projects.vercel.app',
+          href: 'https://payshield-ai-frontend.vercel.app/',
           position: 'top-20 left-20',
         },
         {
@@ -418,7 +418,7 @@ const WORK_LOCATION = {
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'https://payshield-ai-frontend.vercel.app/',
+          href: 'https://study-buddy-ai-frontend.vercel.app/',
           position: 'top-10 right-20',
         },
         {
@@ -494,7 +494,6 @@ const WORK_LOCATION = {
         // },
       ],
     },
-    
   ],
 };
 
