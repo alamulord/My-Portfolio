@@ -49,7 +49,7 @@ const Gallery = () => {
         </div>
       </div>
       
-      <div className='flex bg-[#0b1326]/40 w-full' style={{ height: 'calc(100% - 44px)' }}>>
+      <div className='flex bg-[#0b1326]/40 w-full' style={{ height: 'calc(100% - 44px)' }}>
         <div className='sidebar h-full'>
           <h2>Photos</h2>
           <ul>
