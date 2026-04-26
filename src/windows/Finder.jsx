@@ -22,13 +22,13 @@ const Finder = () => {
       <ul
         className={clsx(
           'space-y-1',
-          needsScroll && [
-            'overflow-y-auto',
-            'scrollbar-ghost',
-            'pr-1',
-          ],
+          needsScroll && ['overflow-y-auto', 'scrollbar-ghost', 'pr-1'],
         )}
-        style={needsScroll ? { maxHeight: `${MAX_VISIBLE_WORK_ITEMS * 40}px` } : undefined}
+        style={
+          needsScroll
+            ? { maxHeight: `${MAX_VISIBLE_WORK_ITEMS * 40}px` }
+            : undefined
+        }
       >
         {items.map((item) => (
           <li
@@ -60,7 +60,7 @@ const Finder = () => {
         <WindowControls target='finder' />
         <Search className='icon' />
       </div>
-      <div className='flex window-content bg-white overflow-hidden!'>
+      <div className='flex window-content bg-[#0b1326]/40 overflow-hidden!'>
         <div className='sidebar flex flex-col overflow-hidden'>
           {finderList('Favorites', favItems)}
           {finderList('Work', workItems, workNeedsScroll)}

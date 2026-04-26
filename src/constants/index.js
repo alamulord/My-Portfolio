@@ -139,7 +139,7 @@ const socials = [
     text: 'Platform',
     icon: '/icons/atom.svg',
     bg: '#4bcb63',
-    link: 'https://dev.to/alamulord',
+    link: 'https://my-blog-iota-sandy.vercel.app/',
   },
   {
     id: 3,

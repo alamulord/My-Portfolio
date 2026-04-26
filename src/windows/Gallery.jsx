@@ -44,12 +44,12 @@ const Gallery = () => {
       <div id='window-header'>
         <WindowControls target='photos' />
         <div className="flex items-center gap-4">
-          <Mail className="w-4 h-4 text-gray-500 cursor-pointer hover:text-gray-800" />
-          <Search className="w-4 h-4 text-gray-500 cursor-pointer hover:text-gray-800" />
+          <Mail className="w-4 h-4 text-[#bcc8d1] cursor-pointer hover:text-white" />
+          <Search className="w-4 h-4 text-[#bcc8d1] cursor-pointer hover:text-white" />
         </div>
       </div>
       
-      <div className='flex bg-white w-full' style={{ height: 'calc(100% - 44px)' }}>
+      <div className='flex bg-[#0b1326]/40 w-full' style={{ height: 'calc(100% - 44px)' }}>>
         <div className='sidebar h-full'>
           <h2>Photos</h2>
           <ul>
@@ -65,10 +65,10 @@ const Gallery = () => {
             ))}
           </ul>
         </div>
-        <div className='flex-1 h-full overflow-y-auto p-3 bg-white scrollbar-ghost'>
+        <div className='flex-1 h-full overflow-y-auto p-3 bg-[#0b1326]/40 scrollbar-ghost'>
           {displayedGallery.length === 0 ? (
-            <div className="flex flex-col w-full h-full items-center justify-center text-gray-400 gap-3">
-              <ImageOff className="w-12 h-12 text-gray-300" />
+            <div className="flex flex-col w-full h-full items-center justify-center text-[#bcc8d1] gap-3">
+              <ImageOff className="w-12 h-12 text-[#bcc8d1]" />
               <p className="font-medium">No photos here yet.</p>
               <p className="text-sm">Hover over an image and click the heart to add it.</p>
             </div>
