@@ -54,7 +54,7 @@ const WindowWrapper = (Component, windowKey) => {
       const [instance] = Draggable.create(el, {
         type: 'x,y',
         trigger: el.querySelector('#window-header'), // Scope this only to select the focus window controls for dagging
-        bounds: window, 
+        bounds: window,
         // Optional: keeps the window within the viewport
 
         // const [instance] = Draggable.create(el, {
@@ -65,8 +65,6 @@ const WindowWrapper = (Component, windowKey) => {
         //     focusWindow(windowKey);
         //   },
         // });
-
-
 
         onPress: () => {
           focusWindow(windowKey);
@@ -90,11 +88,11 @@ const WindowWrapper = (Component, windowKey) => {
         id={windowKey}
         ref={refs}
         style={{ zIndex }}
-        className={`absolute bg-white shadow-2xl drop-shadow-2xl rounded-xl border border-gray-200/50 ${!isMaximized ? 'resizable-window' : ''}`}
+        className={`absolute bg-[#171f33]/40 backdrop-blur-[24px] shadow-2xl drop-shadow-2xl rounded-xl border border-t-white/20 border-r-white/5 border-b-black/40 border-l-white/5 shadow-[0_32px_80px_rgba(87,27,193,0.2)] ${!isMaximized ? 'resizable-window' : ''}`}
         onPointerDown={() => focusWindow(windowKey)}
       >
         <Component {...props} />
-        {!isMaximized && <div className="resize-handle" />}
+        {!isMaximized && <div className='resize-handle' />}
       </section>
     );
   };

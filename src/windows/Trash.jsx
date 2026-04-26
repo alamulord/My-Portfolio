@@ -1,4 +1,3 @@
-
 import { WindowControls } from '#components';
 import WindowWrapper from '#hoc/WindowWrapper';
 import { locations } from '#constants';
@@ -19,12 +18,12 @@ const Trash = () => {
         <WindowControls target='trash' />
         <Trash2 className='icon' />
       </div>
-      <div className='flex bg-white w-full window-content'>
+      <div className='flex bg-[#0b1326]/40 w-full window-content'>
         <ul className='content w-full'>
           {trashItems.map((item) => (
             <li
               key={item.id}
-              className="group cursor-pointer"
+              className='group cursor-pointer'
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />
