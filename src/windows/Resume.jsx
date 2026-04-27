@@ -14,10 +14,8 @@ import { pdfjs, Document, Page } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-// Local bundled resume (used when pdfSrc === 'local')
 import localResumePdf from '../assets/pdfs/Myresume.pdf';
 
-// Stable worker
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Resume = () => {
@@ -28,14 +26,13 @@ const Resume = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(1.2);
 
-  // Determine which PDF to show
   const pdfFile = localResumePdf;
   const title = data?.name ?? 'My Resume';
   const downloadName = title.endsWith('.pdf') ? title : `${title}.pdf`;
 
   function onLoadSuccess({ numPages }) {
     setNumPages(numPages);
-    setPageNumber(1); // reset to first page on PDF change
+    setPageNumber(1);
   }
 
   return (
@@ -89,7 +86,10 @@ const Resume = () => {
       </div>
 
       {/* PDF Viewer */}
-      <div className='flex justify-center window-content bg-[#0b1326]/40 p-2 overflow-auto flex-1 min-h-0'>
+      <div
+        className='flex justify-center window-content bg-[#0b1326]/40 p-2 overflow-auto flex-1 min-h-0'
+        style={{ userSelect: 'none' }}
+      >
         <Document
           file={pdfFile}
           onLoadSuccess={onLoadSuccess}
@@ -100,8 +100,8 @@ const Resume = () => {
             key={`page_${pageNumber}_scale_${scale}`}
             pageNumber={pageNumber}
             scale={scale}
-            renderTextLayer={true}
-            renderAnnotationLayer={true}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
             className='shadow-md transition-all duration-300'
           />
         </Document>
