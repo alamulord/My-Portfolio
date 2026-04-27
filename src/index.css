@@ -35,6 +35,21 @@ body::before {
   z-index: 0;
 }
 
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
 @theme {
   --font-georama: 'Georama', sans-serif;
   --font-roboto: 'Roboto Mono', monospace;
@@ -545,11 +560,11 @@ body::before {
     @apply w-md absolute top-36 right-32 bg-[#171f33]/40 backdrop-blur-[24px] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden border border-t-white/20 border-r-white/5 border-b-black/40 border-l-white/5 shadow-[0_32px_80px_rgba(87,27,193,0.2)];
 
     @media (max-width: 1280px) {
-      @apply w-sm right-4;
+      @apply w-sm right-4 left-auto;
     }
 
     @media (max-width: 1024px) {
-      @apply w-full left-0 top-0 rounded-none border-none;
+      @apply w-full left-0 right-0 top-0 rounded-none border-none h-full;
     }
 
     h2 {
@@ -588,7 +603,7 @@ body::before {
 
     ul {
       li {
-        @apply absolute z-0 select-none flex items-center flex-col;
+        @apply flex items-center flex-col;
 
         img {
           @apply group-hover:bg-white/10 p-1 rounded-md;

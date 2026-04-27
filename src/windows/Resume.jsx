@@ -89,11 +89,12 @@ const Resume = () => {
       </div>
 
       {/* PDF Viewer */}
-      <div className='flex justify-center window-content bg-[#0b1326]/40 p-2'>
+      <div className='flex justify-center window-content bg-[#0b1326]/40 p-2 overflow-auto flex-1 min-h-0'>
         <Document
           file={pdfFile}
           onLoadSuccess={onLoadSuccess}
           loading='Loading PDF...'
+          className='flex justify-center'
         >
           <Page
             key={`page_${pageNumber}_scale_${scale}`}

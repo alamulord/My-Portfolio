@@ -106,19 +106,19 @@ const techStack = [
   },
   {
     category: 'Mobile',
-    items: ['React Native', 'Expo'],
+    items: ['React Native', 'Expo', 'Flutter'],
   },
   {
     category: 'Styling',
-    items: ['Tailwind CSS', 'Sass', 'CSS'],
+    items: ['Tailwind CSS', 'Sass', 'CSS', 'Material', 'ShadCN'],
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'NestJS', 'Hono', 'Python'],
+    items: ['Node.js', 'Python', 'FastAPI', 'Flask', 'Django'],
   },
   {
     category: 'Database',
-    items: ['MongoDB', 'PostgreSQL'],
+    items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis'],
   },
   {
     category: 'Dev Tools',
